@@ -11,12 +11,12 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to='/about'
-        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>About</NavLink>
-      </li>
-      <li>
         <NavLink to='/projects'
         className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>Projects</NavLink>
+      </li>
+      <li>
+        <NavLink to='/about'
+        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>About</NavLink>
       </li>
       <li>
         <NavLink to='/contact'
