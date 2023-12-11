@@ -6,24 +6,27 @@ const Navbar = () => {
       <li>
         <NavLink 
         to='/'
-        className={({ isActive }) => (isActive ? "active" : "")}>
+        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink>Projects</NavLink>
+        <NavLink to='/projects'
+        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>Projects</NavLink>
       </li>
       <li>
-        <NavLink>About</NavLink>
+        <NavLink to='/about'
+        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>About</NavLink>
       </li>
       <li>
-        <NavLink>Contact</NavLink>
+        <NavLink to='/contact'
+        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>Contact</NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="navbar max-w-[1520px] mx-auto">
+    <div className="navbar bg-base-100 max-w-[1520px] mx-auto mt-5">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -44,12 +47,12 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 gap-2"
           >
             {nav}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Anfal.Code</a>
+        <a className="btn btn-ghost text-2xl">Anfal.Code</a>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2">{nav}</ul>
