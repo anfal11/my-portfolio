@@ -11,12 +11,12 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to='/projects'
-        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>Projects</NavLink>
-      </li>
-      <li>
         <NavLink to='/about'
         className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>About</NavLink>
+      </li>
+      <li>
+        <NavLink to='/projects'
+        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>Projects</NavLink>
       </li>
       <li>
         <NavLink to='/contact'
@@ -26,7 +26,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 max-w-[1520px] mx-auto mt-5">
+    <div className="navbar bg-white sticky z-40 max-w-[1520px] mx-auto top-0 pt-5">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
