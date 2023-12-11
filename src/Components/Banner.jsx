@@ -14,7 +14,7 @@ const Banner = () => {
                         <IoMdDownload /> Download CV
                     </button>               
                 </div>
-                <img src={pic} className="one w-96" alt="Anfal Image" />
+                <img src={pic} className="one w-96 lg:w-[430px] xl:w-[550px]" alt="Anfal Image" />
             </div>
         </div>
     );
