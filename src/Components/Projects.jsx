@@ -16,8 +16,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="max-w-[1520px] mx-auto mt-64 mb-20">
-      <h1 className="text-center font-semibold text-4xl underline mb-10">
+    <div id="projects" className="max-w-[1520px] mx-auto mt-64 mb-20">
+      <h1 className="text-center font-bold text-4xl underline mb-10">
         {" "}
         Projects{" "}
       </h1>

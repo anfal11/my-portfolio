@@ -1,26 +1,31 @@
-import { NavLink } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
   const nav = (
     <>
       <li>
-        <NavLink 
+        <ScrollLink
+        spy={true} 
+        smooth={true} offset={-70} duration={500}
         to='/'
-        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>
+        className='text-xl'>
           Home
-        </NavLink>
+        </ScrollLink>
       </li>
       <li>
-        <NavLink to='/projects'
-        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>Projects</NavLink>
+        <ScrollLink to='projects' spy={true} 
+        smooth={true} offset={-70} duration={500}
+        className='text-xl'>Projects</ScrollLink>
       </li>
       <li>
-        <NavLink to='/about'
-        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>About</NavLink>
+        <ScrollLink to='about' spy={true} smooth={true} offset={-70} duration={500}
+        className='text-xl'>About</ScrollLink>
       </li>
       <li>
-        <NavLink to='/contact'
-        className={({ isActive }) => (isActive ? "active text-base" : "text-base")}>Contact</NavLink>
+        <ScrollLink to='contact'
+        spy={true} 
+        smooth={true} offset={-70} duration={500}
+        className='text-xl'>Contact</ScrollLink>
       </li>
     </>
   );

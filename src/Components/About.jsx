@@ -1,7 +1,7 @@
 import pic from "../../public/dsdf.JPG"
 const About = () => {
     return (
-        <div className="mt-64 mb-40">
+        <div id="about" className="mt-64 mb-40">
             
         <div className="hero">
           <div className="hero-content flex flex-col lg:flex-row items-center justify-center gap-4">
