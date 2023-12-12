@@ -33,7 +33,7 @@ const Contact = () => {
 
   return (
     <StyledContactForm className="max-w-5xl mx-auto mt-64 mb-20">
-    <h1  className="text-center font-semibold text-4xl underline mb-10"> Contact Me </h1>
+    <h1  className="text-center font-semibold text-4xl underline mb-10"> Contact with Me </h1>
      <section className="flex flex-col md:flex-row gap-10">
      <img src="https://i.postimg.cc/PxTYMZ6C/silky-contacting-support-specialist-via-online-call.png" alt="" />
      <form className="px-10" ref={form} onSubmit={sendEmail}>
