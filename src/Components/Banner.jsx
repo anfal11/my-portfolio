@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
 
-const pdf = '../../public/latestCV.pdf';
+const pdf = './latestCV.pdf';
 
 const Banner = () => {
     const { scrollYProgress } = useScroll();
