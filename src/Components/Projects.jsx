@@ -4,6 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
     const [cards, setCards] = useState([]);
@@ -15,7 +16,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="max-w-[1520px] mx-auto mt-20">
+    <div className="max-w-[1520px] mx-auto mt-64 mb-20">
       <h1 className="text-center font-semibold text-4xl underline mb-10">
         {" "}
         Projects{" "}
@@ -37,13 +38,14 @@ const Projects = () => {
           {
             cards?.map((card, index) => (
                 <SwiperSlide key={index}>
-                <div className="card lg:card-side bg-base-100 shadow-xl">
+                <div className="card lg:card-side shadow-xl lg:h-96">
   <figure><img src={card?.image} alt="Album"/></figure>
   <div className="card-body">
-    <h2 className="card-title">New album is released!</h2>
-    <p>Click the button to listen on Spotiwhy app.</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Listen</button>
+    <h2 className="card-title">{card?.title}</h2>
+    <p>{card?.details}</p>
+    <div className="card-actions justify-center md:justify-end">
+      <Link to={card?.github}><button className="btn bg-black text-white hover:bg-gray-700">Github Repo</button></Link>
+      <Link to={card?.Live_Link}><button className="btn bg-black text-white hover:bg-gray-700">Live Link</button></Link>
     </div>
   </div>
 </div>
@@ -52,15 +54,6 @@ const Projects = () => {
           }
         </Swiper>
       </>
-
-      <div className="flex items-center justify-center my-10">
-        <button
-          className="btn bg-black text-white hover:bg-gray-700"
-          type="submit"
-        >
-          View All
-        </button>
-      </div>
     </div>
   );
 };

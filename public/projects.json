@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "https://i.imgur.com/dKFaImS.png?1",
+        "image": "https://i.postimg.cc/P5kTCxL3/Screenshot-2465.png",
         "title": "NewsPaper Full Stack Website",
         "details": "This web application utilizes Firebase Authentication, JWT for security, and various React packages like Material-UI, Stripe, and React Query. Users can create and view articles, with admin approval for publishing. Admins manage users, articles, and publishers through a dashboard featuring charts. Premium content is protected, and payment integration is provided via Stripe.",
         "github": "https://github.com/anfal11/newspaper-client",
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "image": "blob:https://imgur.com/c3b0be9c-db6b-4224-95be-7cb7241fd348",
+        "image": "https://i.postimg.cc/kgF9KmKn/Screenshot-2466.png",
         "title": "E-commerce Brand Shop Website",
         "details": "This brand shop website offers a seamless experience with both dark and light mode themes. Users can explore brands, view products, and access features like adding to cart and updating items after logging in. The site supports account creation via email/password or direct login with Google for user convenience.",
         "github": "https://github.com/anfal11/brandshop-client-side",
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "image": "https://i.imgur.com/NQ6zJ3G.png",
+        "image": "https://i.postimg.cc/PxNkgvcx/Screenshot-2467.png",
         "title": "Local Tour Guides Website",
         "details": "This dynamic website features automatic route-based renaming, Firebase-powered user registration and login. It includes an extensive services page with search functionality, enabling users to book and manage services. Users can add and oversee their own services, with a dedicated schedule page displaying booked services and an error-handling 404 page. Framer Motion enhances the overall user experience.",
         "github": "https://github.com/anfal11/local-tour-guide-client",
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "image": "blob:https://imgur.com/cf2a2be1-2848-424f-8821-aab56c61ff0f",
+        "image": "https://i.postimg.cc/tRZsPsTp/Screenshot-2472.png",
         "title": "Restaurant Management System Website",
         "details": "This restaurant management system employs Firebase Authentication and JWT for web security. Users can view and edit their details on the dashboard, check premium article payments, and access payment history. The system utilizes various React packages, including Material-UI, Stripe for payments, and React Query for efficient data management.",
         "github": "https://github.com/anfal11/restaurant-management-client",
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "image": "blob:https://imgur.com/122dca2a-62ef-4703-8ca4-ebb0d214bbd4",
+        "image": "https://i.postimg.cc/mDqGB2fS/Screenshot-2473.png",
         "title": "Event Management System Website",
         "details": "This website comprises six sections, featuring exclusive 'Event Details' accessible only to logged-in users via email-password or Google sign-in. Registration prohibits multiple accounts with the same email. After logging in, the user's name and photo appear in the header, granting access to private sections like 'Gallery' and 'User Profile,' showcasing personalized animations for an enhanced user experience.",
         "github": "https://github.com/anfal11/event-management",
