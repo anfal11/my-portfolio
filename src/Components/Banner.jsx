@@ -1,10 +1,15 @@
 import { IoMdDownload } from 'react-icons/io';
+import { motion, useScroll } from "framer-motion"
 import pic from '../../public/pic2.jpg';
 import './Banner.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const pdf = '../../public/latestCV.pdf';
 
 const Banner = () => {
+    const { scrollYProgress } = useScroll();
   const downloadPDF = () => {
     const iframe = document.createElement('iframe');
     iframe.style.display = 'none';
@@ -26,8 +31,21 @@ const Banner = () => {
 
   return (
     <div className="max-w-[1520px] mx-auto">
+        <motion.div
+    style={{
+      scaleX: scrollYProgress,
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      height: 10,
+      background: "orange",
+      transformOrigin: "0%",
+    }}>
+    </motion.div>
       <div className="flex flex-col lg:flex-row justify-between items-center mt-20 mx-20 gap-10">
-        <div className="flex flex-col items-center justify-center text-center">
+      <div data-aos="fade-right">
+      <div className="flex flex-col items-center justify-center text-center">
           <h1 className="text-5xl font-bold mb-4">Hello, I am Anfal</h1>
           <h2 className="text-2xl font-semibold mb-4">Junior MERN Stack Developer</h2>
           <p className="text-lg mb-6">
@@ -41,7 +59,10 @@ const Banner = () => {
             <IoMdDownload /> Download CV
           </button>
         </div>
+      </div>
+      <div data-aos="fade-left">
         <img src={pic} className="one w-96 lg:w-[430px] xl:w-[550px]" alt="Anfal Image" />
+      </div>
       </div>
     </div>
   );
