@@ -10,7 +10,6 @@ const Banner = () => {
     iframe.style.display = 'none';
     iframe.src = pdf;
 
-    // Wait for the iframe to load the PDF content
     iframe.onload = () => {
       const doc = iframe.contentDocument || iframe.contentWindow.document;
       const downloadLink = doc.createElement('a');
