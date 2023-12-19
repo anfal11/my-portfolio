@@ -1,15 +1,15 @@
 import { IoMdDownload } from 'react-icons/io';
-import { motion, useScroll } from "framer-motion"
+// import { motion, useScroll } from "framer-motion"
 import pic from '../../public/pic2.jpg';
 import './Banner.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
 
-const pdf = './latestCV.pdf';
+const pdf = './cv_of_anfal.pdf';
 
 const Banner = () => {
-    const { scrollYProgress } = useScroll();
+    // const { scrollYProgress } = useScroll();
   const downloadPDF = () => {
     const iframe = document.createElement('iframe');
     iframe.style.display = 'none';
@@ -19,7 +19,7 @@ const Banner = () => {
       const doc = iframe.contentDocument || iframe.contentWindow.document;
       const downloadLink = doc.createElement('a');
       downloadLink.href = pdf;
-      downloadLink.download = 'Anfal_CV.pdf';
+      downloadLink.download = 'cv_of_anfal.pdf';
       doc.body.appendChild(downloadLink);
       downloadLink.click();
       doc.body.removeChild(downloadLink);
@@ -31,7 +31,7 @@ const Banner = () => {
 
   return (
     <div className="max-w-[1520px] mx-auto">
-        <motion.div
+        {/* <motion.div
     style={{
       scaleX: scrollYProgress,
       position: "fixed",
@@ -42,7 +42,7 @@ const Banner = () => {
       background: "orange",
       transformOrigin: "0%",
     }}>
-    </motion.div>
+    </motion.div> */}
       <div className="flex flex-col lg:flex-row justify-between items-center mt-20 mx-20 gap-10">
       <div data-aos="fade-right">
       <div className="flex flex-col items-center justify-center text-center">
