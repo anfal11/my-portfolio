@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const nav = (
     <>
       <li>
-        <Link
+        <ScrollLink
+          activeclass="bg-black text-white"
           spy={true}
           smooth={true}
           offset={-70}
@@ -14,7 +14,7 @@ const Navbar = () => {
           className="text-xl"
         >
           Home
-        </Link>
+        </ScrollLink>
       </li>
       <li>
         <ScrollLink

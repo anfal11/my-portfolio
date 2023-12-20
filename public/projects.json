@@ -5,7 +5,6 @@
         "title": "NewsPaper Full Stack Website",
         "technology": ["ReactJS", "ExpressJs", "MongoDB", "Stripe", "Firebase"],
         "details": [
-            "Secure user authentication",
             "Article management features, allowing users to add, view, delete and update articles",
             "Admin panel & user panel",
             "Add posts approval and manage them",
