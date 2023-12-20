@@ -44,7 +44,7 @@
     },
     {
         "id": 4,
-        "image": "https://i.postimg.cc/tRZsPsTp/Screenshot-2472.png",
+        "image": "https://i.ibb.co/GWDXDBx/restaurant-ss.png",
         "title": "Restaurant Management System",
         "technology": ["ReactJS", "ExpressJs", "MongoDB", "Stripe", "Firebase"],
         "details":  [
@@ -59,7 +59,7 @@
     },
     {
         "id": 5,
-        "image": "https://i.postimg.cc/mDqGB2fS/Screenshot-2473.png",
+        "image": "https://i.ibb.co/rGGTj7g/event-ss.png",
         "title": "Event Management System",
         "technology": ["ReactJS", "Firebase"],
         "details": [

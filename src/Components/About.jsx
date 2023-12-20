@@ -5,12 +5,15 @@ const About = () => {
             
         <div className="hero">
           <div className="hero-content flex flex-col lg:flex-row items-center justify-center gap-4">
+         
             <img
+            data-aos="zoom-in-right"
               src={pic}
               alt="Profile"
               className="rounded-full shadow-2xl mb-6 lg:mb-0 lg:mr-6"
             />
-            <div>
+         
+            <div data-aos="zoom-out">
             <h1 className="text-4xl underline text-center font-bold mb-4">
         About Me
       </h1>

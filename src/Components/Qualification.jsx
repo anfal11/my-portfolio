@@ -1,6 +1,7 @@
 const Qualification = () => {
     return (
       <section className="mt-64 mb-20">
+      <div data-aos="zoom-in-up">
       <h1 className="text-4xl underline text-center font-bold mb-10"> Academic Qualifications </h1>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
@@ -42,7 +43,7 @@ const Qualification = () => {
     <hr />
   </li>
 
-</ul>
+</ul></div>
       </section>
     );
   };
