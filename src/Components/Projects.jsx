@@ -17,7 +17,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="max-w-[1520px] mx-auto mt-48 mb-20">
-      <h1 className="text-center font-bold text-4xl underline mb-10">
+      <h1 className="text-center font-bold text-4xl underline mb-10" data-aos="zoom-in" data-aos-duration="1000">
         {" "}
         Projects{" "}
       </h1>

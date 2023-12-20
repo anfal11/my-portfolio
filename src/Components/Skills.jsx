@@ -4,41 +4,16 @@ const Skills = () => {
       
     
         
-        <h1 className="text-center font-bold text-4xl underline mb-10 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1000">
+        <h1 className="text-center font-bold text-4xl underline mb-10" data-aos="zoom-in" data-aos-duration="1000">
           {" "}
           Skills{" "}
         </h1>
-
-      {/* <div>
-                
-                <div className="flex justify-center items-center gap-5">
-                <h1 className="text-center font-semibold text-2xl underline mb-10 mr-10"> Front-End: </h1>
-                    <SkillItem iconUrl="https://img.icons8.com/color/96/000000/html-5--v1.png" skillName="HTML5" />
-                    <SkillItem iconUrl="https://img.icons8.com/color/96/000000/css3.png" skillName="CSS3" />
-                    <SkillItem iconUrl="https://img.icons8.com/color/96/000000/javascript--v1.png" skillName="JavaScript" />
-                    <SkillItem iconUrl="https://img.icons8.com/color/96/000000/react-native.png" skillName="React" />
-                </div>
-            </div>
-
-            <div className="mt-10">
-                
-                <div className="flex justify-center items-center gap-5">
-                <h1 className="text-center font-semibold text-2xl underline mb-10 mr-10"> Back-End: </h1>
-                    <SkillItem iconUrl='https://img.icons8.com/color/96/000000/nodejs--v1.png' skillName="Node.js" />
-                    <SkillItem iconUrl='https://img.icons8.com/color/96/000000/express-js--v1.png' skillName="Express.js" />
-                    <SkillItem iconUrl='https://img.icons8.com/color/96/000000/mongodb--v1.png'skillName="MongoDB" />
-                </div>
-            </div> */}
 
       <div>
         <div className="flex flex-wrap justify-center items-center gap-5">
           <div
             data-aos="flip-left"
-            data-aos-offset="200"
             data-aos-delay="70"
-            data-aos-duration="1000"
-            data-aos-mirror="true"
-            data-aos-once="false"
           >
             <figure className="flex flex-col items-center">
               <img
