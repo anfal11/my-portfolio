@@ -7,11 +7,11 @@ import Contact from "./Contact";
 
 const Home = () => {
     return (
-        <div id="/">
+        <div>
             <Banner />
             <Skills />
-            <Qualification />
             <Projects />
+            <Qualification />
             <About />
             <Contact />
         </div>

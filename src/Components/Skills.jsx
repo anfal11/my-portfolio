@@ -1,7 +1,7 @@
 
 const Skills = () => {
     return (
-        <div className="max-w-[1520px] mx-auto mt-20">
+        <div className="max-w-[1520px] mx-auto pt-48">
             <h1 className="text-center font-bold text-4xl underline mb-10"> Skills </h1>
 
             {/* <div>
@@ -73,12 +73,11 @@ const Skills = () => {
                 <figcaption className="text-lg font-semibold">MongoDB</figcaption>
                 </figure>
 
-                
-                
-                
+         
         
                 </div>
             </div>
+
         </div>
     );
 };
