@@ -1,31 +1,59 @@
-import { Link as ScrollLink } from 'react-scroll';
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const nav = (
     <>
       <li>
-        <ScrollLink
-        spy={true} 
-        smooth={true} offset={-70} duration={500}
-        to='/'
-        className='text-xl'>
+        <Link
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          to="/"
+          className="text-xl"
+        >
           Home
+        </Link>
+      </li>
+      <li>
+        <ScrollLink
+        activeClass="bg-black text-white"
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="text-xl"
+        >
+          Projects
         </ScrollLink>
       </li>
       <li>
-        <ScrollLink to='projects' spy={true} 
-        smooth={true} offset={-70} duration={500}
-        className='text-xl'>Projects</ScrollLink>
+        <ScrollLink
+        activeClass="bg-black text-white"
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="text-xl"
+        >
+          About
+        </ScrollLink>
       </li>
       <li>
-        <ScrollLink to='about' spy={true} smooth={true} offset={-70} duration={500}
-        className='text-xl'>About</ScrollLink>
-      </li>
-      <li>
-        <ScrollLink to='contact'
-        spy={true} 
-        smooth={true} offset={-70} duration={500}
-        className='text-xl'>Contact</ScrollLink>
+        <ScrollLink
+        activeClass="bg-black text-white"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="text-xl"
+        >
+          Contact
+        </ScrollLink>
       </li>
     </>
   );
