@@ -1,41 +1,73 @@
 [
     {
         "id": 1,
-        "image": "https://i.postimg.cc/P5kTCxL3/Screenshot-2465.png",
+        "image": "https://i.ibb.co/kmCxvLW/newspaper-ss.png",
         "title": "NewsPaper Full Stack Website",
-        "details": "This web application utilizes Firebase Authentication, JWT for security, and various React packages like Material-UI, Stripe, and React Query. Users can create and view articles, with admin approval for publishing. Admins manage users, articles, and publishers through a dashboard featuring charts. Premium content is protected, and payment integration is provided via Stripe.",
+        "technology": ["ReactJS", "ExpressJs", "MongoDB", "Stripe", "Firebase"],
+        "details": [
+            "Secure user authentication",
+            "Article management features, allowing users to add, view, delete and update articles",
+            "Admin panel & user panel",
+            "Add posts approval and manage them",
+            "Premium posts payment gateway",
+            "Create accounts with both email/password and Google login functionalities"
+        ],
         "github": "https://github.com/anfal11/newspaper-client",
         "Live_Link": "https://newspaper-f5b3f.web.app"
     },
     {
         "id": 2,
-        "image": "https://i.postimg.cc/kgF9KmKn/Screenshot-2466.png",
+        "image": "https://i.ibb.co/rZsrCzd/brand-Shop-ss.png",
         "title": "E-commerce Brand Shop Website",
-        "details": "This brand shop website offers a seamless experience with both dark and light mode themes. Users can explore brands, view products, and access features like adding to cart and updating items after logging in. The site supports account creation via email/password or direct login with Google for user convenience.",
+        "technology": ["ReactJS", "ExpressJs", "MongoDB", "Firebase"],
+        "details": [
+            "Dark-Light mode theme",
+            "User authentication, Create accounts via email/password or Google login.",
+            "Effective Communicator  Team Work",
+            "Allowing users to add, update, and favorite products"
+        ],
         "github": "https://github.com/anfal11/brandshop-client-side",
         "Live_Link": "https://brand-shop-client-side.vercel.app"
     },
     {
         "id": 3,
-        "image": "https://i.postimg.cc/PxNkgvcx/Screenshot-2467.png",
+        "image": "https://i.ibb.co/89PbjwN/localtour-ss.png",
         "title": "Local Tour Guides Website",
-        "details": "This dynamic website features automatic route-based renaming, Firebase-powered user registration and login. It includes an extensive services page with search functionality, enabling users to book and manage services. Users can add and oversee their own services, with a dedicated schedule page displaying booked services and an error-handling 404 page. Framer Motion enhances the overall user experience.",
+        "technology": ["ReactJS", "ExpressJs", "MongoDB", "Firebase"],
+        "details": [
+            "Firebase-integrated website, User authentication", 
+            "Service management, Booking capabilities",
+            "Framer Motion for enhanced user experience", 
+            "Ensuring seamless navigation, dynamic route changes, and a 404 page"
+        ],
         "github": "https://github.com/anfal11/local-tour-guide-client",
         "Live_Link": "https://local-tours-guide-client.vercel.app"
     },
     {
         "id": 4,
         "image": "https://i.postimg.cc/tRZsPsTp/Screenshot-2472.png",
-        "title": "Restaurant Management System Website",
-        "details": "This restaurant management system employs Firebase Authentication and JWT for web security. Users can view and edit their details on the dashboard, check premium article payments, and access payment history. The system utilizes various React packages, including Material-UI, Stripe for payments, and React Query for efficient data management.",
+        "title": "Restaurant Management System",
+        "technology": ["ReactJS", "ExpressJs", "MongoDB", "Stripe", "Firebase"],
+        "details":  [
+            "Secure user authentication",
+            "Allowing users to add, view, delete and update articles",
+            "Admin panel & user panel",
+            "Add posts approval and manage them",
+            "Create accounts with both email/password and Google login functionalities"
+        ],
         "github": "https://github.com/anfal11/restaurant-management-client",
         "Live_Link": "https://restaurant-management-f3524.web.app/"
     },
     {
         "id": 5,
         "image": "https://i.postimg.cc/mDqGB2fS/Screenshot-2473.png",
-        "title": "Event Management System Website",
-        "details": "This website comprises six sections, featuring exclusive 'Event Details' accessible only to logged-in users via email-password or Google sign-in. Registration prohibits multiple accounts with the same email. After logging in, the user's name and photo appear in the header, granting access to private sections like 'Gallery' and 'User Profile,' showcasing personalized animations for an enhanced user experience.",
+        "title": "Event Management System",
+        "technology": ["ReactJS", "Firebase"],
+        "details": [
+            "Secure user authentication",
+            "Allowing users to view event details after login",
+            "Create accounts with both email/password and Google login functionalities"
+        ],
         "github": "https://github.com/anfal11/event-management",
         "Live_Link": "https://gaming-tech-events.web.app"
     }

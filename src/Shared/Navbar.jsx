@@ -18,7 +18,7 @@ const Navbar = () => {
       </li>
       <li>
         <ScrollLink
-        activeClass="bg-black text-white"
+          activeclass="bg-black text-white"
           to="projects"
           spy={true}
           smooth={true}
@@ -31,7 +31,7 @@ const Navbar = () => {
       </li>
       <li>
         <ScrollLink
-        activeClass="bg-black text-white"
+          activeclass="bg-black text-white"
           to="about"
           spy={true}
           smooth={true}
@@ -44,7 +44,7 @@ const Navbar = () => {
       </li>
       <li>
         <ScrollLink
-        activeClass="bg-black text-white"
+          activeclass="bg-black text-white"
           to="contact"
           spy={true}
           smooth={true}
