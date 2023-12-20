@@ -1,4 +1,8 @@
 import pic from "../../public/dsdf.JPG"
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 const About = () => {
     return (
         <div id="about" className="mt-64 mb-40">

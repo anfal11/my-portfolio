@@ -2,6 +2,9 @@ import  { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import toast from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 // npm i @emailjs/browser
 

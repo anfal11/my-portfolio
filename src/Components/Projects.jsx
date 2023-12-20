@@ -5,6 +5,9 @@ import "swiper/css/navigation";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const Projects = () => {
   const [cards, setCards] = useState([]);

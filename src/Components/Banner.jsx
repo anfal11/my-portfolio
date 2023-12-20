@@ -3,7 +3,9 @@ import { IoMdDownload } from "react-icons/io";
 import pic from "../../public/pic2.jpg";
 import "./Banner.css";
 import { Typewriter } from "react-simple-typewriter";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const pdf = "./cv_of_anfal.pdf";
 

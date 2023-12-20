@@ -1,4 +1,14 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+
 const Skills = () => {
+
+    useEffect(()=>{
+        AOS.init();
+        AOS.refresh();
+        },[])
   return (
     <div className="max-w-[1520px] mx-auto pt-48">
       
