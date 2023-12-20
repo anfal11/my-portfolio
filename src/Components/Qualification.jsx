@@ -1,3 +1,7 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 const Qualification = () => {
     return (
       <section className="mt-64 mb-20">
