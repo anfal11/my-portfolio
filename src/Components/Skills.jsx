@@ -1,14 +1,14 @@
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 
 const Skills = () => {
 
     useEffect(()=>{
         AOS.init();
-        AOS.refresh();
-        },[])
+    },[]);
+
   return (
     <div className="max-w-[1520px] mx-auto pt-48">
       
@@ -20,19 +20,16 @@ const Skills = () => {
         </h1>
 
       <div>
-        <div className="flex flex-wrap justify-center items-center gap-5">
-          <div
-            data-aos="flip-left"
-            data-aos-delay="70"
-          >
-            <figure className="flex flex-col items-center">
+        <div className="flex flex-wrap justify-center items-center gap-5" data-aos="flip-left"
+            data-aos-duration="1000">
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
                 src="https://img.icons8.com/color/96/000000/html-5--v1.png"
                 alt=""
               />
               <figcaption className="text-lg font-semibold">HTML</figcaption>
             </figure>
-          </div>
+        
 
           <div
             data-aos="flip-left"
@@ -42,7 +39,7 @@ const Skills = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <figure className="flex flex-col items-center">
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
                 src="https://img.icons8.com/color/96/000000/css3.png"
                 alt=""
@@ -58,7 +55,7 @@ const Skills = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <figure className="flex flex-col items-center">
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
                 src="https://img.icons8.com/color/96/000000/tailwindcss--v1.png"
                 alt=""
@@ -77,7 +74,7 @@ const Skills = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <figure className="flex flex-col items-center">
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
                 src="https://img.icons8.com/color/96/000000/bootstrap--v1.png"
                 alt=""
@@ -96,13 +93,13 @@ const Skills = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <figure className="flex flex-col items-center">
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
                 src="https://img.icons8.com/color/96/000000/javascript--v1.png"
                 alt=""
               />
               <figcaption className="text-lg font-semibold">
-                javaScript
+                JavaScript
               </figcaption>
             </figure>
           </div>
@@ -114,7 +111,7 @@ const Skills = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <figure className="flex flex-col items-center">
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
                 src="https://img.icons8.com/color/96/000000/react-native.png"
                 alt=""
@@ -130,7 +127,7 @@ const Skills = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <figure className="flex flex-col items-center">
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
                 src="https://img.icons8.com/color/96/000000/nodejs--v1.png"
                 alt=""
@@ -147,7 +144,7 @@ const Skills = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <figure className="flex flex-col items-center">
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
                 src="https://img.icons8.com/color/96/000000/express-js--v1.png"
                 alt=""
@@ -166,7 +163,7 @@ const Skills = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <figure className="flex flex-col items-center">
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
                 src="https://img.icons8.com/color/96/000000/mongodb--v1.png"
                 alt=""
