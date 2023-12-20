@@ -2,10 +2,8 @@ import { IoMdDownload } from "react-icons/io";
 // import { motion, useScroll } from "framer-motion"
 import pic from "../../public/pic2.jpg";
 import "./Banner.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Typewriter } from "react-simple-typewriter";
-AOS.init();
+
 
 const pdf = "./cv_of_anfal.pdf";
 
@@ -45,7 +43,15 @@ const Banner = () => {
     }}>
     </motion.div> */}
       <div className="flex flex-col lg:flex-row justify-between items-center mt-20 mx-20 gap-10">
-        <div data-aos="fade-right">
+        <div 
+        data-aos="fade-right"
+        data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+        >
           <div className="flex flex-col items-center justify-center text-center">
             <h1 className="text-5xl font-bold mb-4">Hello, I am Anfal</h1>
             <h2 className="text-2xl font-semibold mb-4">
