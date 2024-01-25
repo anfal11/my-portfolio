@@ -1,88 +1,94 @@
 [
-    {
-        "id": 1,
-        "image": "https://i.ibb.co/Hg32DqF/screenshot.png",
-        "title": "Real Estate Full Stack Website",
-        "technology": ["ReactJS", "ExpressJs", "MongoDB", "SSL-Commerz", "Firebase"],
-        "details": [
-            "Dark-Light mode theme, add wishlist option for user and Fraud Detection via NID",
-"User authentication, Create accounts via email/password or Google login, email verification",
-"User panel, Admin Panel & Agent Panel Implemented",
-"Allowing agents to add, update, and delete properties, users can send offer to agents",
-"Implemented Online payment gatepay SSLCommerz and 404 page"
-        ],
-        "github": "https://github.com/anfal11/real-estate-client",
-        "Live_Link": "https://real-estate-client-phi.vercel.app/"
-    },
-    {
-        "id": 2,
-        "image": "https://i.ibb.co/kmCxvLW/newspaper-ss.png",
-        "title": "NewsPaper Full Stack Website",
-        "technology": ["ReactJS", "ExpressJs", "MongoDB", "Stripe", "Firebase"],
-        "details": [
-            "Article management features, allowing users to add, view, delete and update articles",
-            "Admin panel & user panel",
-            "Add posts approval and manage them",
-            "Premium posts payment gateway",
-            "Create accounts with both email/password and Google login functionalities"
-        ],
-        "github": "https://github.com/anfal11/newspaper-client",
-        "Live_Link": "https://newspaper-f5b3f.web.app"
-    },
-    {
-        "id": 3,
-        "image": "https://i.ibb.co/rZsrCzd/brand-Shop-ss.png",
-        "title": "E-commerce Brand Shop Website",
-        "technology": ["ReactJS", "ExpressJs", "MongoDB", "Firebase"],
-        "details": [
-            "Dark-Light mode theme",
-            "User authentication, Create accounts via email/password or Google login.",
-            "Effective Communicator  Team Work",
-            "Allowing users to add, update, and favorite products"
-        ],
-        "github": "https://github.com/anfal11/brandshop-client-side",
-        "Live_Link": "https://brand-shop-client-side.vercel.app"
-    },
-    {
-        "id": 4,
-        "image": "https://i.ibb.co/89PbjwN/localtour-ss.png",
-        "title": "Local Tour Guides Website",
-        "technology": ["ReactJS", "ExpressJs", "MongoDB", "Firebase"],
-        "details": [
-            "Firebase-integrated website, User authentication", 
-            "Service management, Booking capabilities",
-            "Framer Motion for enhanced user experience", 
-            "Ensuring seamless navigation, dynamic route changes, and a 404 page"
-        ],
-        "github": "https://github.com/anfal11/local-tour-guide-client",
-        "Live_Link": "https://local-tours-guide-client.vercel.app"
-    },
-    {
-        "id": 5,
-        "image": "https://i.ibb.co/GWDXDBx/restaurant-ss.png",
-        "title": "Restaurant Management System",
-        "technology": ["ReactJS", "ExpressJs", "MongoDB", "Stripe", "Firebase"],
-        "details":  [
-            "Secure user authentication",
-            "Allowing users to add, view, delete and update articles",
-            "Admin panel & user panel",
-            "Add posts approval and manage them",
-            "Create accounts with both email/password and Google login functionalities"
-        ],
-        "github": "https://github.com/anfal11/restaurant-management-client",
-        "Live_Link": "https://restaurant-management-f3524.web.app/"
-    },
-    {
-        "id": 6,
-        "image": "https://i.ibb.co/rGGTj7g/event-ss.png",
-        "title": "Event Management System",
-        "technology": ["ReactJS", "Firebase"],
-        "details": [
-            "Secure user authentication",
-            "Allowing users to view event details after login",
-            "Create accounts with both email/password and Google login functionalities"
-        ],
-        "github": "https://github.com/anfal11/event-management",
-        "Live_Link": "https://gaming-tech-events.web.app"
-    }
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/Hg32DqF/screenshot.png",
+    "title": "Real Estate Full Stack Website",
+    "technology": [
+      "ReactJS",
+      "ExpressJs",
+      "MongoDB",
+      "SSL-Commerz",
+      "Firebase"
+    ],
+    "details": [
+      "Dark-Light mode theme, add wishlist option for user and Fraud Detection via NID",
+      "User authentication, email verification",
+      "User panel, Admin Panel & Agent Panel Implemented",
+      "Allowing users can send offer to agents",
+      "Implemented Online payment gatepay SSLCommerz and 404 page"
+    ],
+    "github": "https://github.com/anfal11/real-estate-client",
+    "Live_Link": "https://real-estate-client-phi.vercel.app/"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/kmCxvLW/newspaper-ss.png",
+    "title": "NewsPaper Full Stack Website",
+    "technology": ["ReactJS", "ExpressJs", "MongoDB", "Stripe", "Firebase"],
+    "details": [
+      "Article management features, allowing users to add, view, delete and update articles",
+      "Admin panel & user panel",
+      "Add posts approval and manage them",
+      "Premium posts payment gateway",
+      "Create accounts with both email/password and Google login functionalities"
+    ],
+    "github": "https://github.com/anfal11/newspaper-client",
+    "Live_Link": "https://newspaper-f5b3f.web.app"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/rZsrCzd/brand-Shop-ss.png",
+    "title": "E-commerce Brand Shop Website",
+    "technology": ["ReactJS", "ExpressJs", "MongoDB", "Firebase"],
+    "details": [
+      "Dark-Light mode theme",
+      "User authentication, Create accounts via email/password or Google login.",
+      "Effective Communicator  Team Work",
+      "Allowing users to add, update, and favorite products"
+    ],
+    "github": "https://github.com/anfal11/brandshop-client-side",
+    "Live_Link": "https://brand-shop-client-side.vercel.app"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/89PbjwN/localtour-ss.png",
+    "title": "Local Tour Guides Website",
+    "technology": ["ReactJS", "ExpressJs", "MongoDB", "Firebase"],
+    "details": [
+      "Firebase-integrated website, User authentication",
+      "Service management, Booking capabilities",
+      "Framer Motion for enhanced user experience",
+      "Ensuring seamless navigation, dynamic route changes, and a 404 page"
+    ],
+    "github": "https://github.com/anfal11/local-tour-guide-client",
+    "Live_Link": "https://local-tours-guide-client.vercel.app"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/GWDXDBx/restaurant-ss.png",
+    "title": "Restaurant Management System",
+    "technology": ["ReactJS", "ExpressJs", "MongoDB", "Stripe", "Firebase"],
+    "details": [
+      "Secure user authentication",
+      "Allowing users to add, view, delete and update articles",
+      "Admin panel & user panel",
+      "Add posts approval and manage them",
+      "Create accounts with both email/password and Google login functionalities"
+    ],
+    "github": "https://github.com/anfal11/restaurant-management-client",
+    "Live_Link": "https://restaurant-management-f3524.web.app/"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/rGGTj7g/event-ss.png",
+    "title": "Event Management System",
+    "technology": ["ReactJS", "Firebase"],
+    "details": [
+      "Secure user authentication",
+      "Allowing users to view event details after login",
+      "Create accounts with both email/password and Google login functionalities"
+    ],
+    "github": "https://github.com/anfal11/event-management",
+    "Live_Link": "https://gaming-tech-events.web.app"
+  }
 ]
