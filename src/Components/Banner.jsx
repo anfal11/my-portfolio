@@ -64,13 +64,13 @@ const Banner = () => {
                 deleteSpeed={25}
                 loop={0}
                 typeSpeed={75}
-                words={["Junior MERN Stack Developer"]}
+                words={["DevOps Engineer"]}
               />
             </h2>
             <p className="text-lg mb-6">
-              I am passionate about creating responsive and user-friendly web
-              experiences. Skilled in HTML, CSS, JavaScript, React, ExpressJs,
-              and MongoDB.
+              {/* I am passionate about creating responsive and user-friendly web applications and  Skilled in HTML, CSS, JavaScript, React, ExpressJs,
+              and MongoDB. */}
+              DevOps Engineer: CI/CD, Docker, Kubernetes, IaC using Terraform, Ansible, AWS, Azure, GCP proficiency for seamless deployment and management.
             </p>
             <button
               onClick={downloadPDF}
