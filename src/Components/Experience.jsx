@@ -7,7 +7,7 @@ const Experience = () => {
           <p className="text-gray-700 mb-2 font-bold">February 2024 - Present</p>
           <p className="text-gray-700 mb-2 font-semibold">Location: United Kingdom (UK)</p> 
           <ul className="list-disc list-inside">
-            <li>Implemented CI/CD pipelines using Jenkins and Docker for automating deployments.</li>
+            <li>Implemented CI/CD pipelines using Git actions, Jenkins and Docker for automating deployments.</li>
             <li>Managed infrastructure on AWS, including EC2, S3, and RDS.</li>
             <li>Collaborated with development teams to optimize application performance and reliability.</li>
           </ul>

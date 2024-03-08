@@ -31,11 +31,14 @@ const Qualification = () => {
               </svg>
             </div>
             <div className="timeline-start md:text-end mb-10">
-              <time className="font-mono italic">2017</time>
-              <div className="text-lg font-black">SSC</div>
-              Naogaon K.D. Govt. High School Noagaon <br />
-              GPA: 5.00
+              <time className="font-mono italic">2024</time>
+              <div className="text-lg font-black">
+                BSC in Computer Science and Engineering(CSE)
+              </div>
+              Daffodil International University, Ashulia, Savar, Dhaka <br />
+              CGPA: 3.28
             </div>
+           
             <hr />
           </li>
           <li>
@@ -54,6 +57,7 @@ const Qualification = () => {
                 />
               </svg>
             </div>
+           
             <div className="timeline-end mb-10">
               <time className="font-mono italic">2019</time>
               <div className="text-lg font-black">HSC</div>
@@ -79,12 +83,10 @@ const Qualification = () => {
               </svg>
             </div>
             <div className="timeline-start md:text-end mb-10">
-              <time className="font-mono italic">2023</time>
-              <div className="text-lg font-black">
-                BSC in Computer Science and Engineering(CSE)
-              </div>
-              Daffodil International University, Ashulia, Savar, Dhaka <br />
-              CGPA: 3.28
+              <time className="font-mono italic">2017</time>
+              <div className="text-lg font-black">SSC</div>
+              Naogaon K.D. Govt. High School Noagaon <br />
+              GPA: 5.00
             </div>
             <hr />
           </li>
