@@ -22,8 +22,9 @@ const About = () => {
         About Me
       </h1>
               <p className="py-4 ">
-  Greetings! I&apos;m Anfal, a soon-to-graduate computer science student at Daffodil International University. Specializing in the MERN Stack, my journey is marked by a keen passion for innovation. Eagerly seeking opportunities, I am poised to apply my skills to cutting-edge projects, craft engaging user experiences, and play a part in shaping the future of the web. As a fresh graduate, I bring a dynamic and enthusiastic approach to contribute effectively to your team.
-</p>
+  {/* Greetings! I&apos;m Anfal, a soon-to-graduate computer science student at Daffodil International University. Specializing in the MERN Stack, my journey is marked by a keen passion for innovation. Eagerly seeking opportunities, I am poised to apply my skills to cutting-edge projects, craft engaging user experiences, and play a part in shaping the future of the web. As a fresh graduate, I bring a dynamic and enthusiastic approach to contribute effectively to your team. */}
+
+  Greetings! I&apos;m Anfal, a DevOps engineer with a solid foundation in computer science from Daffodil International University. My journey into technology is fueled by a passion for efficiency and automation. I excel at optimizing software delivery pipelines and enhancing system scalability. Proficient in orchestrating seamless deployments and managing cloud infrastructure, I&apos;m committed to continuous improvement and fostering collaboration. Eager to tackle new challenges, I bring a dynamic and adaptable mindset to your team. As a fresh graduate, I&apos;m excited to contribute my skills and drive innovation. Let&apos;s work together to build resilient and agile systems shaping the future of technology.</p>
 
 
               
