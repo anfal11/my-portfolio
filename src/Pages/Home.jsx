@@ -1,5 +1,6 @@
 import About from "../Components/About";
 import Banner from "../Components/Banner";
+import Experience from "../Components/Experience";
 import Projects from "../Components/Projects";
 import Qualification from "../Components/Qualification";
 import Skills from "../Components/Skills";
@@ -13,6 +14,7 @@ const Home = () => {
         <div>
             <Banner />
             <Skills />
+            <Experience />
             <Projects />
             <Qualification />
             <About />
