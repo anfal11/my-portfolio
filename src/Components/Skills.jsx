@@ -29,8 +29,146 @@ const Skills = () => {
               />
               <figcaption className="text-lg font-semibold">HTML</figcaption>
             </figure>
-        
+{/*  */}
+            <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+                src="https://img.icons8.com/color/96/000000/docker"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">DOCKER</figcaption>
+            </figure>
+          </div>
 
+            <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+                src="https://img.icons8.com/color/96/000000/kubernetes"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">KUBERNETES</figcaption>
+            </figure>
+          </div>
+
+            <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+                src="https://img.icons8.com/color/96/000000/amazon-web-services"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">AWS</figcaption>
+            </figure>
+          </div>
+
+            <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+                src="https://img.icons8.com/color/96/000000/linux"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">LINUX</figcaption>
+            </figure>
+          </div>
+
+
+            <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+                src="https://img.icons8.com/color/96/000000/ansible"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">ANSIBLE</figcaption>
+            </figure>
+          </div>
+
+            <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+              className="h-24 w-24"
+                src="https://i.ibb.co/xzngSDs/azure.png"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">AZURE</figcaption>
+            </figure>
+          </div>
+
+            <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+                src="https://img.icons8.com/color/96/000000/git"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">GIT</figcaption>
+            </figure>
+          </div>
+            <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+              className="h-24 w-24"
+                src="https://i.ibb.co/Wt1QDCY/github-1.png"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">GitHub</figcaption>
+            </figure>
+          </div>
+        
+{/*  */}
           <div
             data-aos="flip-left"
             data-aos-offset="200"
@@ -119,6 +257,7 @@ const Skills = () => {
               <figcaption className="text-lg font-semibold">ReactJs</figcaption>
             </figure>
           </div>
+
           <div
             data-aos="flip-left"
             data-aos-offset="200"
@@ -133,6 +272,23 @@ const Skills = () => {
                 alt=""
               />
               <figcaption className="text-lg font-semibold">Nodejs</figcaption>
+            </figure>
+          </div>
+
+          <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+                src="https://img.icons8.com/color/96/000000/firebase"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">Firebase</figcaption>
             </figure>
           </div>
 
@@ -165,12 +321,30 @@ const Skills = () => {
           >
             <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
               <img
+                src="https://img.icons8.com/color/96/000000/mysql"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">MySQL</figcaption>
+            </figure>
+          </div>
+
+          <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
                 src="https://img.icons8.com/color/96/000000/mongodb--v1.png"
                 alt=""
               />
               <figcaption className="text-lg font-semibold">MongoDB</figcaption>
             </figure>
           </div>
+
         </div>
       </div>
     </div>
