@@ -1,6 +1,6 @@
 import { IoMdDownload } from "react-icons/io";
 // import { motion, useScroll } from "framer-motion"
-import pic from "../../public/pic2.jpg";
+import pic from "../../public/pic3.jpg";
 import "./Banner.css";
 import { Typewriter } from "react-simple-typewriter";
 import AOS from "aos";
