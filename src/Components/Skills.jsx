@@ -345,6 +345,23 @@ const Skills = () => {
             </figure>
           </div>
 
+          <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="70"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <figure className="flex flex-col items-center hover:scale-110 transition duration-300 ease-in-out">
+              <img
+                src="https://img.icons8.com/color/96/000000/grafana"
+                alt=""
+              />
+              <figcaption className="text-lg font-semibold">Grafana</figcaption>
+            </figure>
+          </div>
+
         </div>
       </div>
     </div>
