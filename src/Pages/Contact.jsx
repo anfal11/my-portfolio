@@ -42,7 +42,7 @@ const Contact = () => {
      {/* <img src="https://i.postimg.cc/PxTYMZ6C/silky-contacting-support-specialist-via-online-call.png" alt="" /> */}
      <form className="px-10" ref={form} onSubmit={sendEmail}>
         <label>Name</label>
-        <input type="text" name="user_name" />
+        <input type="text" name="from_name" />
         <label>Email</label>
         <input type="email" name="user_email" />
         <label>Message</label>
