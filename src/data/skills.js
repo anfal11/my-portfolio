@@ -42,6 +42,8 @@ export const skillGroups = [
       { name: "Prometheus", icon: icon("prometheus-app") },
       { name: "Zabbix", Icon: FiActivity, color: "#D40000" },
       { name: "MySQL", icon: icon("mysql") },
+      { name: "MSSQL", icon: icon("microsoft-sql-server.png") },
+      { name: "PostgreSQL", icon: icon("postgreesql.png") },
       { name: "MongoDB", icon: icon("mongodb--v1.png") },
       { name: "Firebase", icon: icon("firebase") },
     ],
