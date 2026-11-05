@@ -149,7 +149,7 @@ const Banner = () => {
           </div>
 
           {/* kubectl terminal card */}
-          <div className="absolute -bottom-6 -left-2 hidden animate-float rounded-xl border border-slate-200/80 bg-white/90 px-4 py-3 font-mono text-[13px] shadow-lg backdrop-blur sm:block dark:border-slate-700 dark:bg-slate-900/90">
+          <div className="absolute bottom-[7%] -left-4 hidden animate-float rounded-xl border border-slate-200/80 bg-white/90 px-4 py-3 font-mono text-[13px] shadow-lg backdrop-blur sm:block dark:border-slate-700 dark:bg-slate-900/90">
             <p className="text-slate-400 dark:text-slate-500">
               $ kubectl get pods
             </p>
