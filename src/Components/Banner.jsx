@@ -1,6 +1,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import { Link as ScrollLink } from "react-scroll";
 import { FiArrowRight, FiCheck, FiDownload, FiMapPin } from "react-icons/fi";
+import { FaAws } from "react-icons/fa";
 import { contactInfo, socials } from "../data/socials";
 import "./Banner.css";
 
@@ -17,7 +18,8 @@ const floatingBadges = [
   },
   {
     label: "AWS",
-    icon: "https://img.icons8.com/color/96/000000/amazon-web-services",
+    Icon: FaAws,
+    iconClass: "text-[#232F3E] dark:text-[#FF9900]",
     className: "-left-2 top-[58%] animate-float-slow [animation-delay:2s]",
   },
 ];
@@ -179,7 +181,14 @@ const Banner = () => {
               key={badge.label}
               className={`absolute hidden items-center gap-2 rounded-2xl border border-slate-200/80 bg-white/90 px-3 py-2 text-sm font-semibold text-slate-700 shadow-lg backdrop-blur sm:flex dark:border-slate-700 dark:bg-slate-900/90 dark:text-slate-200 ${badge.className}`}
             >
-              <img src={badge.icon} alt="" className="h-7 w-7" />
+              {badge.Icon ? (
+                <badge.Icon
+                  aria-hidden
+                  className={`h-7 w-7 text-2xl ${badge.iconClass ?? ""}`}
+                />
+              ) : (
+                <img src={badge.icon} alt="" className="h-7 w-7" />
+              )}
               {badge.label}
             </div>
           ))}

@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { useCallback, useEffect, useState } from "react";
+import { FiExternalLink, FiGithub, FiZoomIn } from "react-icons/fi";
 import SectionTitle from "../Shared/SectionTitle";
+import Lightbox from "../Shared/Lightbox";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const [zoomed, setZoomed] = useState(null);
+  const closeZoom = useCallback(() => setZoomed(null), []);
 
   useEffect(() => {
     fetch("/projects.json")
@@ -39,6 +42,15 @@ const Projects = () => {
                   loading="lazy"
                   className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
+                <button
+                  type="button"
+                  onClick={() => setZoomed(project)}
+                  aria-label={`Zoom ${project.title} screenshot`}
+                  title="Zoom"
+                  className="absolute right-3 top-3 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-slate-950/60 text-lg text-white shadow-lg backdrop-blur transition hover:scale-110 hover:bg-brand-500"
+                >
+                  <FiZoomIn />
+                </button>
                 <div className="absolute inset-0 flex items-end justify-end gap-2 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <a
                     href={project.github}
@@ -106,6 +118,12 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      <Lightbox
+        image={zoomed?.image}
+        title={zoomed?.title}
+        onClose={closeZoom}
+      />
     </section>
   );
 };

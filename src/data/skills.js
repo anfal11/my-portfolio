@@ -1,4 +1,5 @@
 import { FiActivity } from "react-icons/fi";
+import { FaAws } from "react-icons/fa";
 
 const icon = (slug) => `https://img.icons8.com/color/96/000000/${slug}`;
 
@@ -7,7 +8,11 @@ export const skillGroups = [
     title: "Cloud & Infrastructure",
     description: "Provisioning and operating scalable cloud platforms.",
     skills: [
-      { name: "AWS", icon: icon("amazon-web-services") },
+      {
+        name: "AWS",
+        Icon: FaAws,
+        iconClass: "text-[#232F3E] dark:text-[#FF9900]",
+      },
       { name: "Azure", icon: icon("azure-1") },
       { name: "Linux", icon: icon("linux") },
       { name: "Ansible", icon: icon("ansible") },

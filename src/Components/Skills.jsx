@@ -45,8 +45,10 @@ const Skills = () => {
                     {skill.Icon ? (
                       <skill.Icon
                         aria-hidden
-                        style={{ color: skill.color }}
-                        className="h-7 w-7 text-2xl transition-transform duration-300 group-hover:scale-110"
+                        style={skill.color ? { color: skill.color } : undefined}
+                        className={`h-7 w-7 text-2xl transition-transform duration-300 group-hover:scale-110 ${
+                          skill.iconClass ?? ""
+                        }`}
                       />
                     ) : (
                       <img
