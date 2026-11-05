@@ -42,12 +42,20 @@ const Skills = () => {
                     key={skill.name}
                     className="group flex items-center gap-2.5 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-500/50 hover:bg-white hover:shadow-md dark:border-slate-700 dark:bg-slate-800/60 dark:hover:bg-slate-800"
                   >
-                    <img
-                      src={skill.icon}
-                      alt=""
-                      loading="lazy"
-                      className="h-7 w-7 transition-transform duration-300 group-hover:scale-110"
-                    />
+                    {skill.Icon ? (
+                      <skill.Icon
+                        aria-hidden
+                        style={{ color: skill.color }}
+                        className="h-7 w-7 text-2xl transition-transform duration-300 group-hover:scale-110"
+                      />
+                    ) : (
+                      <img
+                        src={skill.icon}
+                        alt=""
+                        loading="lazy"
+                        className="h-7 w-7 transition-transform duration-300 group-hover:scale-110"
+                      />
+                    )}
                     <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">
                       {skill.name}
                     </span>

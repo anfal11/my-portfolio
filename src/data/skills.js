@@ -1,3 +1,5 @@
+import { FiActivity } from "react-icons/fi";
+
 const icon = (slug) => `https://img.icons8.com/color/96/000000/${slug}`;
 
 export const skillGroups = [
@@ -21,6 +23,7 @@ export const skillGroups = [
       { name: "Jenkins", icon: icon("jenkins") },
       { name: "Git", icon: icon("git") },
       { name: "GitHub", icon: icon("github") },
+      { name: "GitLab", icon: icon("gitlab") },
     ],
   },
   {
@@ -29,6 +32,7 @@ export const skillGroups = [
     skills: [
       { name: "Grafana", icon: icon("grafana") },
       { name: "Prometheus", icon: icon("prometheus-app") },
+      { name: "Zabbix", Icon: FiActivity, color: "#D40000" },
       { name: "MySQL", icon: icon("mysql") },
       { name: "MongoDB", icon: icon("mongodb--v1.png") },
       { name: "Firebase", icon: icon("firebase") },
