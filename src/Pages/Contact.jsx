@@ -206,33 +206,32 @@ const Contact = () => {
                 className="input-field resize-none"
               />
             </div>
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <button
-                type="submit"
-                disabled={sending}
-                className="btn-brand w-full sm:w-auto"
+            <button
+              type="submit"
+              disabled={sending}
+              className="btn-brand mt-6 w-full sm:w-auto"
+            >
+              <FiSend /> {sending ? "Sending..." : "Send Message"}
+            </button>
+
+            {status && (
+              <div
+                role="status"
+                aria-live="polite"
+                className={`mt-5 flex items-start gap-3 rounded-xl border px-4 py-3 text-sm ${
+                  status.type === "success"
+                    ? "border-brand-500/30 bg-brand-500/5 text-slate-700 dark:bg-brand-500/10 dark:text-slate-200"
+                    : "border-red-500/30 bg-red-500/5 text-slate-700 dark:bg-red-500/10 dark:text-slate-200"
+                }`}
               >
-                <FiSend /> {sending ? "Sending..." : "Send Message"}
-              </button>
-              {status && (
-                <p
-                  role="status"
-                  aria-live="polite"
-                  className={`flex items-start gap-2 text-sm font-medium ${
-                    status.type === "success"
-                      ? "text-emerald-600 dark:text-emerald-400"
-                      : "text-red-600 dark:text-red-400"
-                  }`}
-                >
-                  {status.type === "success" ? (
-                    <FiCheckCircle className="mt-0.5 shrink-0 text-base" />
-                  ) : (
-                    <FiAlertCircle className="mt-0.5 shrink-0 text-base" />
-                  )}
-                  <span>{status.message}</span>
-                </p>
-              )}
-            </div>
+                {status.type === "success" ? (
+                  <FiCheckCircle className="mt-0.5 shrink-0 text-lg text-brand-600 dark:text-brand-400" />
+                ) : (
+                  <FiAlertCircle className="mt-0.5 shrink-0 text-lg text-red-500" />
+                )}
+                <span className="leading-relaxed">{status.message}</span>
+              </div>
+            )}
           </form>
         </div>
       </div>
