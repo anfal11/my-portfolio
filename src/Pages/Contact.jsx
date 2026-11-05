@@ -1,7 +1,14 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
-import { FiGithub, FiMail, FiMapPin, FiSend } from "react-icons/fi";
+import {
+  FiAlertCircle,
+  FiCheckCircle,
+  FiGithub,
+  FiMail,
+  FiMapPin,
+  FiSend,
+} from "react-icons/fi";
 import SectionTitle from "../Shared/SectionTitle";
 import { contactInfo, socials } from "../data/socials";
 
@@ -34,25 +41,42 @@ const channels = [
 const Contact = () => {
   const form = useRef();
   const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState(null); // { type: "success" | "error", message }
 
   const sendEmail = (e) => {
     e.preventDefault();
     setSending(true);
+    setStatus(null);
 
-    emailjs
-      .sendForm(
-        EMAILJS.serviceId,
-        EMAILJS.templateId,
-        form.current,
-        EMAILJS.publicKey
-      )
+    const request = emailjs.sendForm(
+      EMAILJS.serviceId,
+      EMAILJS.templateId,
+      form.current,
+      EMAILJS.publicKey
+    );
+
+    toast.promise(request, {
+      loading: "Sending your message...",
+      success: "Message sent! I'll get back to you soon.",
+      error: "Message could not be sent. Please try again.",
+    });
+
+    request
       .then(
         () => {
-          toast.success("Message sent successfully!");
+          setStatus({
+            type: "success",
+            message:
+              "Thanks! Your message has been sent. I'll get back to you soon.",
+          });
           form.current?.reset();
         },
         (error) => {
-          toast.error("Message could not be sent. Please try again.");
+          setStatus({
+            type: "error",
+            message:
+              "Something went wrong and the message was not sent. Please try again or email me directly.",
+          });
           console.error(error?.text ?? error);
         }
       )
@@ -182,13 +206,33 @@ const Contact = () => {
                 className="input-field resize-none"
               />
             </div>
-            <button
-              type="submit"
-              disabled={sending}
-              className="btn-brand mt-6 w-full sm:w-auto"
-            >
-              <FiSend /> {sending ? "Sending..." : "Send Message"}
-            </button>
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <button
+                type="submit"
+                disabled={sending}
+                className="btn-brand w-full sm:w-auto"
+              >
+                <FiSend /> {sending ? "Sending..." : "Send Message"}
+              </button>
+              {status && (
+                <p
+                  role="status"
+                  aria-live="polite"
+                  className={`flex items-start gap-2 text-sm font-medium ${
+                    status.type === "success"
+                      ? "text-emerald-600 dark:text-emerald-400"
+                      : "text-red-600 dark:text-red-400"
+                  }`}
+                >
+                  {status.type === "success" ? (
+                    <FiCheckCircle className="mt-0.5 shrink-0 text-base" />
+                  ) : (
+                    <FiAlertCircle className="mt-0.5 shrink-0 text-base" />
+                  )}
+                  <span>{status.message}</span>
+                </p>
+              )}
+            </div>
           </form>
         </div>
       </div>
