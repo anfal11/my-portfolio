@@ -10,8 +10,11 @@ export const skillGroups = [
     skills: [
       {
         name: "AWS",
-        Icon: FaAws,
-        iconClass: "text-[#232F3E] dark:text-[#FF9900]",
+        // Original logo in light mode; its black lettering vanishes on dark
+        // backgrounds, so dark mode swaps to the orange vector icon.
+        icon: icon("amazon-web-services"),
+        DarkIcon: FaAws,
+        iconClass: "text-[#FF9900]",
       },
       { name: "Azure", icon: icon("azure-1") },
       { name: "Linux", icon: icon("linux") },

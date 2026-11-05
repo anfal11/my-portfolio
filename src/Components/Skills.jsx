@@ -51,12 +51,24 @@ const Skills = () => {
                         }`}
                       />
                     ) : (
-                      <img
-                        src={skill.icon}
-                        alt=""
-                        loading="lazy"
-                        className="h-7 w-7 transition-transform duration-300 group-hover:scale-110"
-                      />
+                      <>
+                        <img
+                          src={skill.icon}
+                          alt=""
+                          loading="lazy"
+                          className={`h-7 w-7 transition-transform duration-300 group-hover:scale-110 ${
+                            skill.DarkIcon ? "dark:hidden" : ""
+                          }`}
+                        />
+                        {skill.DarkIcon && (
+                          <skill.DarkIcon
+                            aria-hidden
+                            className={`hidden h-7 w-7 text-2xl transition-transform duration-300 group-hover:scale-110 dark:block ${
+                              skill.iconClass ?? ""
+                            }`}
+                          />
+                        )}
+                      </>
                     )}
                     <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">
                       {skill.name}

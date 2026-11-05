@@ -18,8 +18,9 @@ const floatingBadges = [
   },
   {
     label: "AWS",
-    Icon: FaAws,
-    iconClass: "text-[#232F3E] dark:text-[#FF9900]",
+    icon: "https://img.icons8.com/color/96/000000/amazon-web-services",
+    DarkIcon: FaAws,
+    iconClass: "text-[#FF9900]",
     className: "-left-2 top-[58%] animate-float-slow [animation-delay:2s]",
   },
 ];
@@ -181,13 +182,18 @@ const Banner = () => {
               key={badge.label}
               className={`absolute hidden items-center gap-2 rounded-2xl border border-slate-200/80 bg-white/90 px-3 py-2 text-sm font-semibold text-slate-700 shadow-lg backdrop-blur sm:flex dark:border-slate-700 dark:bg-slate-900/90 dark:text-slate-200 ${badge.className}`}
             >
-              {badge.Icon ? (
-                <badge.Icon
+              <img
+                src={badge.icon}
+                alt=""
+                className={`h-7 w-7 ${badge.DarkIcon ? "dark:hidden" : ""}`}
+              />
+              {badge.DarkIcon && (
+                <badge.DarkIcon
                   aria-hidden
-                  className={`h-7 w-7 text-2xl ${badge.iconClass ?? ""}`}
+                  className={`hidden h-7 w-7 text-2xl dark:block ${
+                    badge.iconClass ?? ""
+                  }`}
                 />
-              ) : (
-                <img src={badge.icon} alt="" className="h-7 w-7" />
               )}
               {badge.label}
             </div>
