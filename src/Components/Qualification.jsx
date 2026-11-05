@@ -3,7 +3,7 @@ import SectionTitle from "../Shared/SectionTitle";
 
 const education = [
   {
-    year: "Oct 2025 — Jan 2026",
+    year: "Sep 2025 — Mar 2026",
     title: "Research Assistant",
     institution:
       "University of Fukui, Japan · Automata Theory & Quantum Computing",
@@ -13,7 +13,8 @@ const education = [
   {
     year: "2024",
     title: "B.Sc. in Computer Science & Engineering (CSE)",
-    institution: "Daffodil International University, Ashulia, Savar, Dhaka",
+    institution:
+      "Daffodil International University, Dhaka · Major in Cloud Engineering & Web Development",
     note: "CGPA 3.28",
     icon: FiAward,
   },
