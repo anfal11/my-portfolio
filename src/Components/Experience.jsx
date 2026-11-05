@@ -5,9 +5,10 @@ const experiences = [
   {
     role: "DevOps Engineer",
     company: "NEC Money Transfer Limited",
+    workplace: "On-site",
     start: "2026-04-16",
     end: null,
-    location: "Banasree, Dhaka, Bangladesh",
+    location: "House 31, Block A, Road 2, Banasree, Dhaka 1219, Bangladesh",
     stack: [
       "Docker",
       "CI/CD",
@@ -50,7 +51,7 @@ const experiences = [
     workplace: "Hybrid",
     start: "2024-02-01",
     end: "2025-07-31",
-    location: "Dhaka, Bangladesh",
+    location: "Baridhara DOHS, Dhaka, Bangladesh",
     stack: [
       "GitHub Actions",
       "Jenkins",
