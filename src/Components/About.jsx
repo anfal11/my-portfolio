@@ -1,40 +1,102 @@
-import pic from "../../public/DP.jpeg"
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
+import { FiDownload, FiMail, FiMapPin, FiUser, FiBookOpen } from "react-icons/fi";
+import { Link as ScrollLink } from "react-scroll";
+import SectionTitle from "../Shared/SectionTitle";
+import { contactInfo } from "../data/socials";
+
+const facts = [
+  { label: "Name", value: "Anfal Ratul", icon: FiUser },
+  { label: "Email", value: contactInfo.email, icon: FiMail },
+  { label: "Location", value: contactInfo.location, icon: FiMapPin },
+  { label: "Degree", value: "B.Sc. in CSE", icon: FiBookOpen },
+];
 
 const About = () => {
-    return (
-        <div id="about" className="mt-64 mb-40">
-            
-        <div className="hero">
-          <div className="hero-content flex flex-col lg:flex-row items-center justify-center gap-4">
-         
-            <img
-            data-aos="zoom-in-right"
-              src={pic}
-              alt="Profile"
-              className="rounded-full shadow-2xl mb-6 lg:mb-0 lg:mr-6"
+  return (
+    <section id="about" className="section bg-slate-50 dark:bg-slate-900/40">
+      <div className="container-x grid items-center gap-14 lg:grid-cols-12">
+        <div data-aos="fade-right" className="lg:col-span-5">
+          <div className="relative mx-auto w-64 sm:w-72 lg:w-80">
+            <div
+              aria-hidden
+              className="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-tr from-brand-500 to-blue-600 opacity-80 blur-2xl"
             />
-         
-            <div data-aos="zoom-out">
-            <h1 className="text-4xl underline text-center font-bold mb-4">
-        About Me
-      </h1>
-              <p className="py-4 ">
-  {/* Greetings! I&apos;m Anfal, a soon-to-graduate computer science student at Daffodil International University. Specializing in the MERN Stack, my journey is marked by a keen passion for innovation. Eagerly seeking opportunities, I am poised to apply my skills to cutting-edge projects, craft engaging user experiences, and play a part in shaping the future of the web. As a fresh graduate, I bring a dynamic and enthusiastic approach to contribute effectively to your team. */}
-
-  {/* Greetings! I&apos;m Anfal, a DevOps engineer with a solid foundation in computer science from Daffodil International University. My journey into technology is fueled by a passion for efficiency and automation. I excel at optimizing software delivery pipelines and enhancing system scalability. Proficient in orchestrating seamless deployments and managing cloud infrastructure, I&apos;m committed to continuous improvement and fostering collaboration. Eager to tackle new challenges, I bring a dynamic and adaptable mindset to your team. As a fresh graduate, I&apos;m excited to contribute my skills and drive innovation. Let&apos;s work together to build resilient and agile systems shaping the future of technology. */}
-  
-  Hi! I&apos;m Anfal, a DevOps engineer with a solid foundation in Computer Science from Daffodil International University. I&apos;m passionate about technology, automation and making software systems work more efficiently. I enjoy working with CI/CD pipelines, cloud platforms and deployment automation. I focus on improving software delivery processes, maintaining system reliability and learning new tools and technologies. I&apos;m comfortable working with cloud infrastructure and enjoy solving real-world technical problems. I am focused on advancing my professional experience, improving system performance and contributing to scalable and reliable infrastructure solutions. I enjoy working in collaborative environments and solving real-world technical challenges.
-  </p>
-
-
-              
-            </div>
+            <div
+              aria-hidden
+              className="absolute -bottom-4 -right-4 h-full w-full rounded-[2rem] border-2 border-brand-500/50"
+            />
+            <img
+              src="/DP.jpeg"
+              alt="Anfal Ratul"
+              className="relative w-full rounded-[2rem] object-cover shadow-2xl ring-4 ring-white dark:ring-slate-900"
+            />
           </div>
         </div>
+
+        <div data-aos="fade-left" className="lg:col-span-7">
+          <SectionTitle
+            eyebrow="About Me"
+            title="A DevOps engineer who loves automation"
+            align="left"
+          />
+
+          <p className="-mt-6 leading-relaxed text-slate-600 dark:text-slate-400">
+            Hi! I&apos;m Anfal, a DevOps engineer with a solid foundation in
+            Computer Science from Daffodil International University. I&apos;m
+            passionate about technology, automation and making software systems
+            work more efficiently. I enjoy working with CI/CD pipelines, cloud
+            platforms and deployment automation.
+          </p>
+          <p className="mt-4 leading-relaxed text-slate-600 dark:text-slate-400">
+            I focus on improving software delivery processes, maintaining system
+            reliability and learning new tools and technologies. I&apos;m
+            comfortable working with cloud infrastructure and enjoy solving
+            real-world technical problems in collaborative environments, while
+            contributing to scalable and reliable infrastructure solutions.
+          </p>
+
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+            {facts.map((fact) => (
+              <li
+                key={fact.label}
+                className="card-surface flex items-center gap-4 px-4 py-3"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400">
+                  <fact.icon />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    {fact.label}
+                  </p>
+                  <p className="truncate text-sm font-semibold text-slate-800 dark:text-slate-100">
+                    {fact.value}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href={contactInfo.resume}
+              download="resume_of_anfal.pdf"
+              className="btn-brand"
+            >
+              <FiDownload /> Download CV
+            </a>
+            <ScrollLink
+              to="contact"
+              smooth
+              offset={-80}
+              duration={500}
+              className="btn-outline"
+            >
+              Let&apos;s Talk
+            </ScrollLink>
+          </div>
         </div>
-      );
-    };
+      </div>
+    </section>
+  );
+};
+
 export default About;

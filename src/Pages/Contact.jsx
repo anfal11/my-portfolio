@@ -1,112 +1,199 @@
-import  { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import styled from "styled-components";
 import toast from "react-hot-toast";
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
+import { FiGithub, FiMail, FiMapPin, FiSend } from "react-icons/fi";
+import SectionTitle from "../Shared/SectionTitle";
+import { contactInfo, socials } from "../data/socials";
 
-// npm i @emailjs/browser
+const EMAILJS = {
+  serviceId: "service_vwr0nkq",
+  templateId: "template_09991ke",
+  publicKey: "hzuxgdjmF1d_QQv-r",
+};
+
+const channels = [
+  {
+    label: "Email",
+    value: contactInfo.email,
+    href: `mailto:${contactInfo.email}`,
+    icon: FiMail,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/anfal11",
+    href: "https://github.com/anfal11",
+    icon: FiGithub,
+  },
+  {
+    label: "Location",
+    value: contactInfo.location,
+    icon: FiMapPin,
+  },
+];
 
 const Contact = () => {
   const form = useRef();
+  const [sending, setSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setSending(true);
 
     emailjs
       .sendForm(
-        "service_vwr0nkq",
-        "template_09991ke",
+        EMAILJS.serviceId,
+        EMAILJS.templateId,
         form.current,
-        "hzuxgdjmF1d_QQv-r"
+        EMAILJS.publicKey
       )
       .then(
-        (result) => {
-            toast.success("Message Sent Successfully");
-          console.log(result.text);
-          console.log("message sent");
+        () => {
+          toast.success("Message sent successfully!");
+          form.current?.reset();
         },
         (error) => {
-            toast.error("Message Not Sent");
-          console.log(error.text);
+          toast.error("Message could not be sent. Please try again.");
+          console.error(error?.text ?? error);
         }
-      );
+      )
+      .finally(() => setSending(false));
   };
 
   return (
-    <StyledContactForm className="max-w-5xl mx-auto mt-64 mb-20" id="contact">
-    <div data-aos="fade-left">
-    <h1  className="text-center font-bold text-4xl underline mb-10"> Contact with Me </h1>
-     <section className="flex flex-col md:flex-row gap-10">
-     {/* <img src="https://i.postimg.cc/PxTYMZ6C/silky-contacting-support-specialist-via-online-call.png" alt="" /> */}
-     <form className="px-10" ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="from_name" />
-        <label>Email</label>
-        <input type="email" name="reply_to" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form>
-     </section>
-    </div>
-    </StyledContactForm>
+    <section id="contact" className="section">
+      <div className="container-x">
+        <SectionTitle
+          eyebrow="Contact"
+          title="Let's Work Together"
+          description="Have a project in mind or an opportunity to discuss? Drop me a message and I'll get back to you."
+        />
+
+        <div className="grid gap-8 lg:grid-cols-12">
+          <div data-aos="fade-right" className="space-y-4 lg:col-span-5">
+            {channels.map((channel) => {
+              const inner = (
+                <>
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-blue-600 text-xl text-white shadow-lg shadow-brand-500/25">
+                    <channel.icon />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                      {channel.label}
+                    </p>
+                    <p className="truncate font-semibold text-slate-800 dark:text-slate-100">
+                      {channel.value}
+                    </p>
+                  </div>
+                </>
+              );
+              const className =
+                "card-surface card-hover flex items-center gap-4 p-5";
+              return channel.href ? (
+                <a
+                  key={channel.label}
+                  href={channel.href}
+                  target={channel.href.startsWith("http") ? "_blank" : undefined}
+                  rel="noreferrer"
+                  className={className}
+                >
+                  {inner}
+                </a>
+              ) : (
+                <div key={channel.label} className={className}>
+                  {inner}
+                </div>
+              );
+            })}
+
+            <div className="card-surface p-5">
+              <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">
+                Follow me
+              </p>
+              <div className="mt-4 flex gap-3">
+                {socials.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={social.name}
+                    className="social-btn"
+                  >
+                    <social.icon />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            data-aos="fade-left"
+            className="card-surface p-6 sm:p-8 lg:col-span-7"
+          >
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label
+                  htmlFor="from_name"
+                  className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300"
+                >
+                  Your name
+                </label>
+                <input
+                  id="from_name"
+                  type="text"
+                  name="from_name"
+                  required
+                  placeholder="John Doe"
+                  className="input-field"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="reply_to"
+                  className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300"
+                >
+                  Your email
+                </label>
+                <input
+                  id="reply_to"
+                  type="email"
+                  name="reply_to"
+                  required
+                  placeholder="you@example.com"
+                  className="input-field"
+                />
+              </div>
+            </div>
+            <div className="mt-5">
+              <label
+                htmlFor="message"
+                className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={6}
+                placeholder="Tell me about your project or opportunity..."
+                className="input-field resize-none"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={sending}
+              className="btn-brand mt-6 w-full sm:w-auto"
+            >
+              <FiSend /> {sending ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 };
 
 export default Contact;
-
-// Styles
-const StyledContactForm = styled.div`
-
-
-  form {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-    font-size: 16px;
-
-    input {
-      width: 100%;
-      height: 35px;
-      padding: 7px;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
-    }
-
-    textarea {
-      max-width: 100%;
-      min-width: 100%;
-      width: 100%;
-      max-height: 100px;
-      min-height: 100px;
-      padding: 7px;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
-    }
-
-    label {
-      margin-top: 1rem;
-    }
-
-    input[type="submit"] {
-      margin-top: 2rem;
-      cursor: pointer;
-      background: black;
-      color: white;
-      border: none;
-    }
-  }
-`;

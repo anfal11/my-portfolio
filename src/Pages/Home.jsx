@@ -1,26 +1,23 @@
-import About from "../Components/About";
 import Banner from "../Components/Banner";
+import Skills from "../Components/Skills";
 import Experience from "../Components/Experience";
 import Projects from "../Components/Projects";
 import Qualification from "../Components/Qualification";
-import Skills from "../Components/Skills";
+import About from "../Components/About";
 import Contact from "./Contact";
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
 
 const Home = () => {
-    return (
-        <div>
-            <Banner />
-            <Skills />
-            <Experience />
-            <Projects />
-            <Qualification />
-            <About />
-            <Contact />
-        </div>
-    );
+  return (
+    <>
+      <Banner />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Qualification />
+      <About />
+      <Contact />
+    </>
+  );
 };
 
 export default Home;

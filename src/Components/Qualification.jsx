@@ -1,122 +1,94 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
+import { FiAward, FiBookOpen } from "react-icons/fi";
+import SectionTitle from "../Shared/SectionTitle";
+
+const education = [
+  {
+    year: "Oct 2025 — Jan 2026",
+    title: "Research Assistant",
+    institution:
+      "University of Fukui, Japan · Automata Theory & Quantum Computing",
+    note: "Research",
+    icon: FiBookOpen,
+  },
+  {
+    year: "2024",
+    title: "B.Sc. in Computer Science & Engineering (CSE)",
+    institution: "Daffodil International University, Ashulia, Savar, Dhaka",
+    note: "CGPA 3.28",
+    icon: FiAward,
+  },
+  {
+    year: "2019",
+    title: "Higher Secondary Certificate (HSC)",
+    institution: "Naogaon Govt. College, Naogaon",
+    note: "GPA 4.42",
+    icon: FiAward,
+  },
+  {
+    year: "2017",
+    title: "Secondary School Certificate (SSC)",
+    institution: "Naogaon K.D. Govt. High School, Naogaon",
+    note: "GPA 5.00",
+    icon: FiAward,
+  },
+];
 
 const Qualification = () => {
   return (
-    <section className="mt-64 mb-20">
-      <div
-        data-aos="zoom-in-up"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-      >
-        <h1 className="text-4xl underline text-center font-bold mb-10">
-          {" "}
-          Academic Qualifications{" "}
-        </h1>
-        <ul className="px-2 timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-          <li>
-            <div className="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-5 w-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
+    <section id="education" className="section">
+      <div className="container-x">
+        <SectionTitle
+          eyebrow="Education"
+          title="Academic Journey"
+          description="My academic background, from school to university and beyond."
+        />
 
-            <div className="timeline-end mb-10">
-              <time className="font-mono italic">2026</time>
-              <div className="text-lg font-black">Research Student</div>
-              University Of Fukui, Japan <br />
-    
-            </div>
-            <hr />
-          </li>
-          <li>
-            <hr />
+        <div className="relative mx-auto max-w-3xl">
+          <div
+            aria-hidden
+            className="absolute bottom-0 left-5 top-0 w-px bg-gradient-to-b from-brand-500 via-slate-300 to-transparent md:left-1/2 dark:via-slate-700"
+          />
 
-            <div className="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-5 w-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div className="timeline-start md:text-end mb-10">
-              <time className="font-mono italic">2024</time>
-              <div className="text-lg font-black">
-                BSC in Computer Science and Engineering(CSE)
-              </div>
-              Daffodil International University, Ashulia, Savar, Dhaka <br />
-              CGPA: 3.28
-            </div>
+          <ul className="space-y-10">
+            {education.map((item, index) => {
+              const left = index % 2 === 0;
+              return (
+                <li
+                  key={item.title}
+                  data-aos={left ? "fade-right" : "fade-left"}
+                  className={`relative pl-14 md:w-1/2 md:pl-0 ${
+                    left ? "md:pr-12" : "md:ml-auto md:pl-12"
+                  }`}
+                >
+                  <span
+                    className={`absolute top-1 flex h-10 w-10 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-brand-500 to-blue-600 text-white shadow-lg shadow-brand-500/30 dark:border-slate-950 ${
+                      left
+                        ? "left-0 md:left-auto md:-right-5"
+                        : "left-0 md:-left-5"
+                    }`}
+                  >
+                    <item.icon className="text-base" />
+                  </span>
 
-            <hr />
-          </li>
-          <li>
-            <hr />
-            <div className="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-5 w-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-
-            <div className="timeline-end mb-10">
-              <time className="font-mono italic">2019</time>
-              <div className="text-lg font-black">HSC</div>
-              Naogaon Govt. College, Naogaon <br />
-              GPA: 4.42
-            </div>
-            <hr />
-          </li>
-          <li>
-            <hr />
-            <div className="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-5 w-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div className="timeline-start md:text-end mb-10">
-              <time className="font-mono italic">2017</time>
-              <div className="text-lg font-black">SSC</div>
-              Naogaon K.D. Govt. High School Noagaon <br />
-              GPA: 5.00
-            </div>
-            <hr />
-          </li>
-        </ul>
+                  <div className="card-surface card-hover p-6">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="font-mono text-sm font-medium text-brand-600 dark:text-brand-400">
+                        {item.year}
+                      </span>
+                      <span className="chip">{item.note}</span>
+                    </div>
+                    <h3 className="mt-3 text-lg font-bold text-slate-900 dark:text-white">
+                      {item.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                      {item.institution}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </section>
   );

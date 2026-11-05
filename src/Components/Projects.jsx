@@ -1,115 +1,113 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Keyboard, Pagination, Navigation } from "swiper/modules";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
+import { FiExternalLink, FiGithub } from "react-icons/fi";
+import SectionTitle from "../Shared/SectionTitle";
 
 const Projects = () => {
-  const [cards, setCards] = useState([]);
+  const [projects, setProjects] = useState([]);
+
   useEffect(() => {
-    fetch("./projects.json")
+    fetch("/projects.json")
       .then((res) => res.json())
-      .then((data) => setCards(data))
-      .catch((error) => console.error("Error fetching data:", error));
+      .then((data) => setProjects(data))
+      .catch((error) => console.error("Error fetching projects:", error));
   }, []);
 
   return (
-    <div id="projects" className="max-w-[1520px] mx-auto mt-48 mb-20">
-      <h1 className="text-center font-bold text-4xl underline mb-10" data-aos="zoom-in" data-aos-duration="1000">
-        {" "}
-        Projects{" "}
-      </h1>
-      <>
-        <Swiper
-          // slidesPerView={3}
-          // spaceBetween={30}
-          keyboard={{ enabled: true }}
-          pagination={{ clickable: true }}
-          navigation={true}
-          modules={[Keyboard, Pagination, Navigation]}
-          className="mySwiper"
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 60,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            1167: {
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
-            1280: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-          }}
-        >
-          {cards?.map((card, index) => (
-            <SwiperSlide key={index}>
-              <div className="card w-96 xl:w-96 mx-5 bg-base-100 shadow-xl mb-20">
-                <figure>
-                  <img
-                    src={card?.image}
-                    className="w-64 h-64 hover:scale-110 transition duration-300 ease-in-out"
-                    alt={card?.title}
-                  />
-                </figure>
-                <div className="card-body h-[480px]">
-                  <h2 className="card-title">{card?.title}</h2>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {card?.technology?.map((tech, index) => (
-                      <div key={index} className="bg-gray-200 p-2 rounded">
-                        {tech}
-                      </div>
-                    ))}
-                  </div>
-                  {Array.isArray(card?.details) && card?.details.length > 0 ? (
-                    <ul className="list-disc list-inside h-[330px]">
-                      {card?.details.map((detail, index) => (
-                        <li key={index}>{detail}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p>No details available</p>
-                  )}
-                  <div className="card-actions justify-center">
-                    <Link to={card?.github}>
-                      <button className="btn bg-black text-white hover:bg-gray-700">
-                        Github Repo
-                      </button>
-                    </Link>
-                    <Link to={card?.Live_Link}>
-                      <button className="btn bg-black text-white hover:bg-gray-700">
-                        Live Link
-                      </button>
-                    </Link>
-                  </div>
+    <section
+      id="projects"
+      className="section bg-slate-50 dark:bg-slate-900/40"
+    >
+      <div className="container-x">
+        <SectionTitle
+          eyebrow="Projects"
+          title="Things I've Built"
+          description="A selection of full-stack applications I have designed, built and deployed."
+        />
+
+        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <article
+              key={project.id ?? index}
+              data-aos="fade-up"
+              data-aos-delay={(index % 3) * 100}
+              className="card-surface card-hover group flex flex-col overflow-hidden"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 flex items-end justify-end gap-2 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.title} GitHub repository`}
+                    className="icon-btn !border-white/30 !bg-white/20 !text-white hover:!bg-white hover:!text-slate-900"
+                  >
+                    <FiGithub />
+                  </a>
+                  <a
+                    href={project.Live_Link}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.title} live site`}
+                    className="icon-btn !border-white/30 !bg-white/20 !text-white hover:!bg-white hover:!text-slate-900"
+                  >
+                    <FiExternalLink />
+                  </a>
                 </div>
               </div>
-            </SwiperSlide>
+
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                  {project.title}
+                </h3>
+
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {project.technology?.map((tech) => (
+                    <span key={tech} className="chip">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                  {project.details?.slice(0, 3).map((detail) => (
+                    <li key={detail} className="flex gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
+                      <span className="leading-relaxed">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-auto flex gap-3 pt-6">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-outline flex-1 !px-4 !py-2.5"
+                  >
+                    <FiGithub /> Code
+                  </a>
+                  <a
+                    href={project.Live_Link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-brand flex-1 !px-4 !py-2.5"
+                  >
+                    <FiExternalLink /> Live
+                  </a>
+                </div>
+              </div>
+            </article>
           ))}
-        </Swiper>
-      </>
-    </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
 export default Projects;
-{
-  /* <div className="card lg:card-side shadow-xl lg:h-96">
-  <figure><img src={card?.image} alt="Album"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">{card?.title}</h2>
-    <p>{card?.details}</p>
-    
-  </div>
-</div> */
-}
