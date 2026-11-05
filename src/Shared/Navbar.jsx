@@ -4,6 +4,7 @@ import { FiMoon, FiSun } from "react-icons/fi";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
 import { useTheme } from "../hooks/useTheme";
 import { navLinks } from "../data/navLinks";
+import Logo from "./Logo";
 
 const scrollProps = {
   spy: true,
@@ -36,15 +37,7 @@ const Navbar = () => {
       }`}
     >
       <nav className="container-x flex h-[72px] items-center justify-between">
-        <ScrollLink
-          to="home"
-          smooth
-          offset={-80}
-          duration={500}
-          className="cursor-pointer text-2xl font-extrabold tracking-tight"
-        >
-          Anfal<span className="text-gradient">.Code</span>
-        </ScrollLink>
+        <Logo />
 
         <ul className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (

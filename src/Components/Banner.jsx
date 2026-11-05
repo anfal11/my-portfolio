@@ -15,6 +15,11 @@ const floatingBadges = [
     icon: "https://img.icons8.com/color/96/000000/kubernetes",
     className: "-right-2 top-[46%] animate-float-slow",
   },
+  {
+    label: "AWS",
+    icon: "https://img.icons8.com/color/96/000000/amazon-web-services",
+    className: "-left-2 top-[58%] animate-float-slow [animation-delay:2s]",
+  },
 ];
 
 const pods = [

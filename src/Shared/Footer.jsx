@@ -2,6 +2,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { FiMail, FiMapPin } from "react-icons/fi";
 import { navLinks } from "../data/navLinks";
 import { contactInfo, socials } from "../data/socials";
+import Logo from "./Logo";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -10,15 +11,7 @@ const Footer = () => {
     <footer className="border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/60">
       <div className="container-x grid gap-12 py-16 md:grid-cols-12">
         <div className="md:col-span-5">
-          <ScrollLink
-            to="home"
-            smooth
-            offset={-80}
-            duration={500}
-            className="cursor-pointer text-2xl font-extrabold tracking-tight"
-          >
-            Anfal<span className="text-gradient">.Code</span>
-          </ScrollLink>
+          <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-600 dark:text-slate-400">
             DevOps engineer focused on automating delivery pipelines, running
             reliable cloud infrastructure and keeping systems observable and
