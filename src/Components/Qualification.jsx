@@ -15,7 +15,7 @@ const education = [
     title: "B.Sc. in Computer Science & Engineering (CSE)",
     institution:
       "Daffodil International University, Dhaka · Major in Cloud Engineering & Web Development",
-    note: "CGPA 3.28",
+    note: "CGPA 3.29",
     icon: FiAward,
   },
   {
